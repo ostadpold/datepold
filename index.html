@@ -1,14 +1,53 @@
+<!-- made by navid poladi -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+    <meta name="theme-color" content="rgb(241 245 249)">
+    <title>DatePold</title>
+    <link rel="stylesheet" href="./end.css">
 </head>
-<body class="flex w-full h-[100vh] justify-center items-center bg-slate-400">
-    <span class="bg-slate-800 rounded px-8 py-6 text-4xl text-slate-100  font-mono">loading...</span>
-<script src="./scripts.js"></script>
+<body>
+    <div id="date">
+        <div id="inputs">
+            <label>
+                <input onkeyup="validInput(event)" type="text" placeholder="yyyy">
+            </label>
+            <span class="select-none">-</span>
+            <label>
+                <input onkeyup="validInput(event)" type="text" placeholder="mm">
+            </label>
+            <span class="select-none">-</span>
+            <label>
+                <input onkeyup="validInput(event)" type="text" placeholder="dd">
+            </label>
+        </div>
+        <div id="method">
+            <label class="group">
+                <input class="peer hidden" type="radio" name="method">
+                <span class="bg-slate-200 dark:bg-slate-700 dark:text-slate-100 dark:peer-checked:bg-sky-500 dark:group-hover:bg-slate-600 peer-checked:text-slate-100 peer-checked:bg-sky-400 group-hover:bg-slate-300" >Persian date to Georgian Date</span>
+            </label>
+            <label class="group">
+                <input class="peer hidden" type="radio" name="method">
+                <span class="bg-slate-200 dark:bg-slate-700 dark:text-slate-100 dark:peer-checked:bg-sky-500 dark:group-hover:bg-slate-600 peer-checked:text-slate-100 peer-checked:bg-sky-400 group-hover:bg-slate-300">Georgian Date to Persian Date</span>
+            </label>
+            <label class="group">
+                <input class="peer hidden" type="radio" name="method">
+                <span class="bg-slate-200 dark:bg-slate-700 dark:text-slate-100 dark:peer-checked:bg-sky-500 dark:group-hover:bg-slate-600 peer-checked:text-slate-100 peer-checked:bg-sky-400 group-hover:bg-slate-300">Age calculation(Georgian Date)</span>
+            </label>
+        </div>
+        <div id="submit">
+            <button>Go</button>
+        </div>
+        <div id="result">
+            <span>Result:</span>
+            <span>...</span>
+        </div>
+    </div>
+<script src="./main.js"></script>
+<script src="./connector.js" type="module"></script>
+<script src="./saveData.js"></script>
 </body>
 </html>
